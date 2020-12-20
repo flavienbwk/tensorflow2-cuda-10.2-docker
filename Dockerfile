@@ -37,6 +37,6 @@ WORKDIR /app
 RUN git clone https://github.com/tensorflow/tensorflow.git
 
 WORKDIR /app/tensorflow
-RUN git checkout r2.2
+RUN git checkout r2.3
 RUN ./configure
 RUN bazel build --config=cuda //tensorflow/tools/pip_package:build_pip_package
