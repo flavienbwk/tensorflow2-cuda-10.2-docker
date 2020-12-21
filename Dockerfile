@@ -21,11 +21,12 @@ ENV TF_CUDA_COMPUTE_CAPABILITIES=6.1
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES video,compute,utility
 ENV CUDA_VISIBLE_DEVICES 0
+ENV TMP /tmp
 
 # TF install for CUDA 10.2
 
 ## Bazel install
-RUN python3.7 -m pip install numpy wheel
+RUN python3.7 -m pip install numpy==1.18.5 wheel
 RUN python3.7 -m pip install keras_preprocessing --no-deps
 RUN curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor > bazel.gpg
 RUN mv bazel.gpg /etc/apt/trusted.gpg.d/
@@ -37,6 +38,11 @@ WORKDIR /app
 RUN git clone https://github.com/tensorflow/tensorflow.git
 WORKDIR /app/tensorflow
 RUN git checkout r2.3
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 2
+RUN ln -s /usr/bin/python3.7 /usr/bin/python
 RUN ./configure
-RUN bazel build --config=cuda //tensorflow/tools/pip_package:build_pip_package
+RUN bazel clean
 
+## Please set the number of jobs=your_processor_nb_threads and RAM to the maximum available
+RUN bazel build --jobs 11 --local_ram_resources=18432 --config=cuda //tensorflow/tools/pip_package:build_pip_package
