@@ -45,4 +45,5 @@ RUN ./configure
 RUN bazel clean
 
 ## Please set the number of jobs=your_processor_nb_threads and RAM to the maximum available
-RUN bazel build --jobs 11 --local_ram_resources=18432 --config=cuda //tensorflow/tools/pip_package:build_pip_package
+RUN bazel build --jobs 46 --local_ram_resources=240000 --config=cuda //tensorflow/tools/pip_package:build_pip_package
+RUN rm -rf /root/.cache
