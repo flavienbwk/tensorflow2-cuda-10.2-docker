@@ -1,8 +1,6 @@
-# tensorflow2-cuda-10.2-docker
+# TensorFlow 2 - CUDA 10.2 - Docker
 
-Tensorflow 2.3, CUDA 10.2, CUDNN 7, Ubuntu 18.04, Docker compatible image to run with your CUDA 10.2 GPU.
-
-- Works with Python 3.7
+Tensorflow 2.3, CUDA 10.2, CUDNN 7, Ubuntu 18.04, Docker compatible image to run with your CUDA 10.2 GPU through Python 3.7
 
 ## Build
 
