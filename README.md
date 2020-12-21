@@ -9,12 +9,13 @@ Tensorflow 2.3, CUDA 10.2, CUDNN 7, Ubuntu 18.04, Docker compatible image to run
 
 Enjoy my pre-compiled image
 
-```
+```bash
 docker pull flavienb/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04
 ```
 
 ## Build
 
 ```bash
-docker build -t flavienb/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04 .
+docker build -t flavienb/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04-build -f Dockerfile.build . # 18Gb of Docker image
+docker build -t flavienb/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04 . # ~6Gb Docker image
 ```
