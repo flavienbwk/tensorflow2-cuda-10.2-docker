@@ -2,16 +2,18 @@
 
 Tensorflow 2.3, CUDA 10.2, CUDNN 7, Ubuntu 18.04, Docker compatible image to run with your CUDA 10.2 GPU through Python 3.7
 
-## Build
-
-```bash
-docker build -t docker.pkg.github.com/flavienbwk/tensorflow2-cuda-10.2-docker/tensorflow-cuda .
-```
+- This image has been compiled on a 32-core, 128G of RAM server in **70 minutes**
 
 ## Use
 
 Enjoy my pre-compiled image
 
 ```
-docker pull docker.pkg.github.com/flavienbwk/tensorflow2-cuda-10.2-docker/tensorflow-cuda
+docker pull flavienb/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04
+```
+
+## Build
+
+```bash
+docker build -t flavienb/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04 .
 ```
