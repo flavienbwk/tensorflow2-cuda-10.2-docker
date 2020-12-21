@@ -2,7 +2,7 @@
 
 Tensorflow 2.3, CUDA 10.2, CUDNN 7, Ubuntu 18.04, Docker compatible image to run with your CUDA 10.2 GPU through Python 3.7
 
-- This image has been compiled on a 32-core, 128G of RAM server in **70 minutes**
+- This image has been compiled on a 40-core, 240G of RAM server in 3979 seconds (**66 minutes**)
 
 ## Use
 
