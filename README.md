@@ -5,13 +5,13 @@ Tensorflow 2.3, CUDA 10.2, CUDNN 7, Ubuntu 18.04, Docker compatible image to run
 ## Build
 
 ```bash
-docker build -t flavienbwk/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04 .
+docker build -t docker.pkg.github.com/flavienbwk/tensorflow2-cuda-10.2-docker/tensorflow-cuda .
 ```
 
 ## Use
 
-Enjoy my pre-compiled image (ongoing build)
+Enjoy my pre-compiled image
 
 ```
-docker pull flavienbwk/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04
+docker pull docker.pkg.github.com/flavienbwk/tensorflow2-cuda-10.2-docker/tensorflow-cuda
 ```
