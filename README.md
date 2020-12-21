@@ -10,7 +10,7 @@ docker build -t flavienbwk/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04:devel .
 
 ## Use
 
-Enjoy my pre-compiled image :
+Enjoy my pre-compiled image (ongoing build)
 
 ```
 docker pull flavienbwk/tensorflow-cuda:10.2-cudnn7-devel-ubuntu18.04:latest
